@@ -1,17 +1,12 @@
 {
+    "version": 2,
     "builds": [
       {
-        "src": "vc__handler__python.py",
+        "src": "main.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
-      {
-        "src": "/:path*",
-        "dest": "vc__handler__python.py"
-      }
-    ],
-    "env": {
-      "APP_MODULE": "main:app"
-    }
+      { "src": "/(.*)", "dest": "/" }
+    ]
   }
